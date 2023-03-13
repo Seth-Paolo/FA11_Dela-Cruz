@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1>  </h1>
+	<p id="demo"> Output: </p>
+	<script> 
+		triangle();
+		
+		function triangle() {
+			let x = prompt("Enter Side A");
+			let y = prompt("Enter Side B");
+			let z = prompt("Enter Side C");
+			
+			if(x == y && y == z){
+				document.getElementById("demo").innerHTML = "The Triangle Is An Equilateral";		
+			}
+			
+			else if((x == y && y != z) || (x != y && y == z) || (x != y && y != z && x == z)){
+				document.getElementById("demo").innerHTML = "The Triangle Is An Isosceles";
+			}
+			
+			else{
+				document.getElementById("demo").innerHTML = "The Triangle Is An Scalene";
+			}
+		}
+	</script>
+</body>
+</html>
